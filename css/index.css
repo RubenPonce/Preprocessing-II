@@ -342,9 +342,13 @@ header .nav-header nav a {
   width: 83%;
   text-align: center;
   font-size: 2rem;
-  color: #FFFFFF;
+  color: white;
   padding: 15px;
   border-radius: 10px;
+}
+.home .content-pick .destination .btn:hover {
+  color: #17A2B8;
+  background: #000;
 }
 .home .content-pick .destination .btn:hover {
   color: #17A2B8;
