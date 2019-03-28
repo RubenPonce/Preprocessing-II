@@ -1,1 +1,44 @@
 // Navigation Styles here
+//escaped values
+@tablet: ~'(max-width: 815px)';
+@navBar: ~'(max-width: 615px)';
+header{
+    
+
+    border-bottom: 2px dashed @silver; 
+    
+    .nav-header{
+    display: flex;
+    justify-content: space-evenly; 
+    padding-bottom: 12px;
+
+    @media @navBar {
+        flex-direction: column;
+        justify-content: center;
+        
+        align-items: center;
+    }
+    h2{
+        margin-top: 23px;
+        font-size: 4rem;
+        margin-right: 40px;
+        margin-left: -30px;
+        @media @navBar {
+            margin: 10px 0;
+        }
+    }
+    nav{
+        margin-top: 35px;
+        margin-left: 40px;
+        @media @navBar {
+            margin: 10px 0;
+        }
+        a{
+            font-size: 1.6rem;
+            margin-left: 29px;
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+}
