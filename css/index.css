@@ -263,6 +263,7 @@ header .nav-header nav a {
 }
 @media (max-width: 815px) {
   .home .content-section .text-content {
+    margin: 20px 0;
     width: 92%;
   }
 }
