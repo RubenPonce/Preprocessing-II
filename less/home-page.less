@@ -1,21 +1,61 @@
-.home {
 
+
+
+ @tablet: ~'(max-width: 815px)';
+ 
+ @phone: ~'(max-width: 500px)';
+.home {
+ //comment to push 
   .content-section {
-    margin: 30px 0;
+    margin: 0 0 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
+    @media @tablet {
+      flex-direction: column;
+      margin: 0 3%;
+      
+      align-items: center;
+     
+     }
+    .opening{
+      margin-bottom: 30px;
+      padding-bottom: 10px;
+      border-bottom: 1px dashed grey;
+      @media @tablet {
+       margin: 0 3%;
+      }
+      @media @phone {
+        margin: 0 5%;
+      }
+      img{
+        height: 240px;
+        margin-bottom: 20px;
+        @media @phone {
+          height: 200px;
+        }
+      }
+      
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @tablet {
+        margin: 20px 0;
+        width: 92%;
+      }
+      
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @tablet {
+        width: 80%;
+        margin: 20px 0;
+        
+      }
 
       img {
         border-radius: 10px;
@@ -26,7 +66,10 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
-
+    @media @tablet {
+      flex-direction: column-reverse;
+    }
+    
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -41,6 +84,10 @@
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+    @media @tablet{
+      width: 80%;
+      margin: 20px auto;
+    }
 
     img {
       border-radius: 10px;
@@ -52,10 +99,30 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    @media @tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
     .destination {
       width: 30%;
       margin-bottom: 30px;
+      @media @tablet {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn{
+        .addButton();
+        
+        &:hover{
+          color: @eastern-blue;
+          background: #000;
+        }
+      }
     }
   }
 }// home
